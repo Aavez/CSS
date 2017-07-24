@@ -10,7 +10,7 @@ public class MD5{
 			try {
 				MessageDigest md = MessageDigest.getInstance("MD5");
 				byte[] messageDigest = md.digest(input.getBytes());
-				System.out.println("Byte Representation" +mesageDigest);
+				System.out.println("Byte Representation" +messageDigest);
 				BigInteger number = new BigInteger(1,messageDigest);
 				System.out.println("number;" +number);
 				String hashtext = number.toString(16);
@@ -29,5 +29,13 @@ public class MD5{
 					}
 					
 					
-						public static void main(String[] args)throwsNoSuchAlgorithmException, IOException {
-							System.out.println("Enter the String")
+						public static void main(String[] args) throws
+						NoSuchAlgorithmException,IOException {
+							System.out.println("Enter the String");
+							BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+							String text1 = br.readLine();
+							System.out.println("Hash Values:"+getMD5("text1"));
+						}
+						
+						
+					}
